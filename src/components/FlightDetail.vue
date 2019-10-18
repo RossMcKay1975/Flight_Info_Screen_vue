@@ -1,27 +1,29 @@
-<!-- <template lang="html">
+<template lang="html">
   <div v-if="flight" id="flightDetail">
     <div id="detailWrapper">
-    <h2>{{ flight }}</h2>
-    <div id="flexWrapper">
-    </div>
-      <div id="left">
-        <p><span>Flight Description</span>: {{ flight.description }} </p>
-
+      <h2>{{ flight.FlightNo }}</h2>
+      <div id="flexWrapper">
+      </div>
+        <div id="left">
+        <p><span>Flight No.</span>: {{ flight.Status }} </p>
       </div>
     </div>
   </div>
 </template>
 
+
 <script>
+import ListComponent from './ListComponent.vue';
+
 export default {
   name: 'flight-detail',
   props: ['flight'],
-  methods: {
-    makeFavourite: function(){
-      this.film.favourite = true
+  components: {
+
+
     }
   }
-}
+
 </script>
 
-<style lang="css" scoped> -->
+<style lang="css" scoped>

@@ -2,6 +2,7 @@
   <div>
     <ul>
       <list-component v-for="(flight, index) in flights" :flight="flight" :key="index"></list-component>
+      
     </ul>
   </div>
 

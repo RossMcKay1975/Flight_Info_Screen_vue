@@ -1,5 +1,6 @@
 <template lang="html">
-  <li v-on:click="handleClick" v-bind:class="{ flight }">{{ flight }}</li>
+  <li v-on:click="handleClick" v-bind:class="{ flight }">{{ flight.FlightNo }}</li>
+
 </template>
 
 <script>
@@ -9,7 +10,7 @@ export default {
   props: ['flight'],
   methods: {
     handleClick(){
-      // eventBus.$emit('film-selected', this.film)
+      eventBus.$emit('flight-selected', this.flight)
     }
   }
 }
