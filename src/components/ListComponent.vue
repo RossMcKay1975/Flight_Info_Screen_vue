@@ -1,19 +1,44 @@
 <template lang="html">
-  <table  v-bind:class="{ flight }">{{ flight.FlightNo }}
-    <p><span>Date </span>:{{ flight.Date }} </p>
-    <p><span>Time </span>:{{ flight.Time }} </p>
-    <p><span>Arr/Dep </span>:{{ flight.ArrDep }} </p>
-    <p><span>Port Of Call </span>:{{ flight.PortOfCallA }} </p>
-    <p><span>OtherInfo </span>:{{ flight.OtherInfo }} </p>
-    <p><span> </span>:{{ flight.Image }} </p>
-    <p><span>Arrival Hall </span>:{{ flight.ArrHall }} </p>
-    <p><span>Date Time </span>:{{ flight.dateTime }} </p>
-    <p><span>Airline Code </span>:{{ flight.airlineCode }} </p>
-    <p><span>CodeShare </span>:{{ flight.CodeShare }} </p>
-    <p><span>Parent Flight </span>:{{ flight.ParentFlight }} </p>
-    <p><span>Gate </span>:{{ flight.Gate }} </p>
-    <p><span>Arrival Hall </span>:{{ flight.ArrHall }} </p>
-    <p><span>Active </span>:{{ flight.Active }} </p>
+
+  <table v-bind:class="{ flight }">
+    <thead>
+      <tr>
+        <th> Flight No </th>
+        <th> Date </th>
+        <th> Time </th>
+        <th> Arr/Dep </th>
+        <th> Port of Call </th>
+        <th> Other Info </th>
+        <th> Additional Info </th>
+        <th> Date Time </th>
+        <th> Airline Code </th>
+        <th> CodeShare </th>
+        <th> Parent Flight </th>
+        <th> Gate </th>
+        <th> Arrival Hall </th>
+        <th> flight.Active </th>
+        <th> </th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="FlightTableRow">
+        <td> {{ flight.FlightNo }} </td>
+        <td> {{ flight.Date }} </td>
+        <td> {{ flight.Time }} </td>
+        <td> {{ flight.ArrDep }} </td>
+        <td> {{ flight.PortOfCallA }} </td>
+        <td> {{ flight.otherInfo }} </td>
+        <td> {{ flight.Additional }} </td>
+        <td> {{ flight.dateTime }} </td>
+        <td> {{ flight.airlineCode }} </td>
+        <td> {{ flight.CodeShare }} </td>
+        <td> {{ flight.ParentFlight }} </td>
+        <td> {{ flight.Gate }} </td>
+        <td> {{ flight.ArrHall }} </td>
+        <td> {{ flight.Active }} </td>
+        <td> {{ flight.Image }} </td>
+      </tr>
+    </tbody>
   </table>
 </template>
 
@@ -31,4 +56,5 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 </style>

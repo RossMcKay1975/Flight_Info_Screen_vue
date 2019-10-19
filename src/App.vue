@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <h1>Flight Information Screen</h1>
     <div class="main-container">
       <flights-list :flights="flights"></flights-list>
@@ -37,3 +37,18 @@ export default {
 }
 
 </script>
+<style>
+  #app{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  background-color: black;
+  color: white;
+  margin-top: 60px;
+}
+h1{
+  text-align: center;
+}
+
+</style>
