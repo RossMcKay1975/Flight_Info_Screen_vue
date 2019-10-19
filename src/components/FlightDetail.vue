@@ -1,7 +1,7 @@
 <template lang="html">
   <div v-if="flight" id="flightDetail">
     <div id="detailWrapper">
-      <h2>{{ flight.FlightNo }}</h2>
+      <h2>{{ flight }}</h2>
       <div id="flexWrapper">
       </div>
         <div id="left">
@@ -19,8 +19,6 @@ export default {
   name: 'flight-detail',
   props: ['flight'],
   components: {
-
-
     }
   }
 
