@@ -38,17 +38,17 @@ export default {
 
 </script>
 <style>
-  #app{
+  h1{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
+  text-align: center;
   background-color: black;
   color: white;
   margin-top: 60px;
 }
-h1{
+/* h1{
   text-align: center;
-}
+} */
 
 </style>

@@ -8,7 +8,7 @@
         <th> Time </th>
         <th> Arr/Dep </th>
         <th> Port of Call </th>
-        <th> Other Info </th>
+        <!-- <th> Other Info </th> -->
         <th> Additional Info </th>
         <th> Date Time </th>
         <th> Airline Code </th>
@@ -17,7 +17,7 @@
         <th> Gate </th>
         <th> Arrival Hall </th>
         <th> flight.Active </th>
-        <th> </th> 
+        <th> </th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
         <td> {{ flight.Time }} </td>
         <td> {{ flight.ArrDep }} </td>
         <td> {{ flight.PortOfCallA }} </td>
-        <td> {{ flight.otherInfo }} </td>
+        <!-- <td> {{ flight.otherInfo }} </td> -->
         <td> {{ flight.Additional }} </td>
         <td> {{ flight.dateTime }} </td>
         <td> {{ flight.airlineCode }} </td>
@@ -47,14 +47,38 @@ import { eventBus } from '../main.js'
 export default {
   name: 'list-component',
   props: ['flight'],
-  methods: {
-    handleClick(){
-      eventBus.$emit('flight-selected', this.flight)
-    }
+
   }
-}
+
 </script>
 
-<style lang="css" scoped>
+<style scoped>
+
+tr {
+  text-align: center;
+  min-width: 100px;
+  font-size:
+}
+th {
+  text-align: center;
+  min-width: 100px;
+
+}
+
+table {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: black;
+  color: white;
+  /* margin-top: 1px; */
+  border-style: solid;
+  border-width: thin;
+  font-size: 14px
+
+}
+
+
 
 </style>
