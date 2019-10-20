@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <div class="main-container">
-    <h1>Flight Information Screen</h1>
-    <table>
+
+    <div>
+      <h1>Flight Information Screen</h1>
       <flights-table v-for="(flights ) in flights" :flight="flights" ></flights-table>
-    </table>
+    </div>
     </div>
   </div>
 </template>
@@ -47,7 +48,8 @@ export default {
   margin-top: 60px;
 } */
 h1{
-  text-align: center;
+  text-align: left;
+  background-color: yellow
 }
 
 </style>
