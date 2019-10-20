@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <h1>Flight Information Screen</h1>
     <div class="main-container">
-      <flights-list :flights="flights"></flights-list>
-    <flight-detail :flight="selectedFlight"></flight-detail>
+    <h1>Flight Information Screen</h1>
+    <table>
+      <flights-table v-for="(flights ) in flights" :flight="flights" ></flights-table>
+    </table>
     </div>
   </div>
 </template>
 
 <script>
 import { eventBus } from './main.js'
-import FlightsList from './components/FlightsList.vue'
-import FlightDetail from './components/FlightDetail.vue';
+import FlightsTable from './components/FlightsTable.vue'
+
 
 export default {
   name: 'app',
@@ -22,23 +23,21 @@ export default {
       }
     },
     components: {
-      "flights-list": FlightsList,
-      "flight-detail": FlightDetail
+      "flights-table": FlightsTable,
+
     },
   mounted(){
     fetch('https://kabrudle.edinburghairport.com/api/flights/all')
     .then(res => res.json())
     .then(flights => this.flights = flights)
 
-    eventBus.$on('flight-selected', (flight) => {
-      this.selectedFlight = flight
-    })
+
   }
 }
 
 </script>
 <style>
-  h1{
+  /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -46,9 +45,9 @@ export default {
   background-color: black;
   color: white;
   margin-top: 60px;
-}
-/* h1{
-  text-align: center;
 } */
+h1{
+  text-align: center;
+}
 
 </style>

@@ -1,6 +1,5 @@
 <template lang="html">
-
-  <table v-bind:class="{ flight }">
+  <table v-bind:class="{ flights }">
     <thead>
       <tr>
         <th> Flight No </th>
@@ -8,8 +7,8 @@
         <th> Time </th>
         <th> Arr/Dep </th>
         <th> Port of Call </th>
-        <!-- <th> Other Info </th> -->
-        <th> Additional Info </th>
+        <th> Other Info </th>
+        <!-- <th> Additional Info </th> -->
         <th> Date Time </th>
         <th> Airline Code </th>
         <th> CodeShare </th>
@@ -36,7 +35,7 @@
         <td> {{ flight.Gate }} </td>
         <td> {{ flight.ArrHall }} </td>
         <td> {{ flight.Active }} </td>
-        <td> {{ flight.Image }} </td>
+        <td> <image :imageUrl="flight.image"></image>  </td>
       </tr>
     </tbody>
   </table>
@@ -44,9 +43,10 @@
 
 <script>
 import { eventBus } from '../main.js'
+// import FlightImage from "@/components/FlightImage";
 export default {
-  name: 'list-component',
-  props: ['flight'],
+  name: 'flights-table',
+  props: ['flight']
 
   }
 
@@ -62,8 +62,9 @@ tr {
 th {
   text-align: center;
   min-width: 100px;
-
 }
+
+
 
 table {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -72,10 +73,11 @@ table {
   text-align: center;
   background-color: black;
   color: white;
-  /* margin-top: 1px; */
+  margin-top: 1px;
   border-style: solid;
   border-width: thin;
-  font-size: 14px
+  font-size: 14px;
+  margin-left: 1px
 
 }
 
