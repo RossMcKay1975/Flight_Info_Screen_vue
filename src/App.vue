@@ -1,11 +1,8 @@
 <template>
   <div id="app">
     <div class="main-container">
-
-    <div>
-      <h1>Flight Information Screen</h1>
-      <flights-table v-for="(flights ) in flights" :flight="flights" ></flights-table>
-    </div>
+        <h1>Flight Information Screen</h1>
+        <flights-table v-for="flights in flights" :flight="flights"/>
     </div>
   </div>
 </template>
@@ -14,42 +11,45 @@
 import { eventBus } from './main.js'
 import FlightsTable from './components/FlightsTable.vue'
 
-
 export default {
   name: 'app',
   data(){
     return {
       flights: [],
-      selectedFlight: null
+      timer: '',
+      selectedFlight: null,
+
       }
     },
     components: {
       "flights-table": FlightsTable,
-
     },
-  mounted(){
-    fetch('https://kabrudle.edinburghairport.com/api/flights/all')
+    created () {
+        this.fetchData();
+        this.timer = setInterval(this.fetchData(), 5000)
+      },
+    methods: {
+    fetchData(){
+     fetch('https://kabrudle.edinburghairport.com/api/flights/all')
     .then(res => res.json())
-    .then(flights => this.flights = flights)
-
-
+    .then(flights => this.flights = flights);
+      },
+    },
   }
-}
+
+
+
+
 
 </script>
 <style>
-  /* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: black;
-  color: white;
-  margin-top: 60px;
-} */
+
 h1{
-  text-align: left;
-  background-color: yellow
+  text-align: center;
+  background-color: yellow;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px
 }
 
 </style>
