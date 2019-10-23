@@ -45,6 +45,8 @@ export default {
 <style>
 
 h1{
+  font-family: ClanWeb-Ultra, Calibri, Arial, Helvetica;
+  font-weight:bold;
   text-align: center;
   background-color: yellow;
   margin-top: 0px;
