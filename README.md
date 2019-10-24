@@ -1,5 +1,12 @@
 # flight_info_screen
 
+###Brief
+Use your favourite JavaScript framework and libraries. We use React, but you're welcome to use another if you like
+The flight information should be updated regularly to ensure the flight information shown to the user is up to date
+Please .gitignore the node_modules directory!
+The solution should be simple, but think about how it could fit in to a bigger project (reusable components, etc)
+Please feel free to contact gary_harrower@edinburghairport.com with any questions you have!
+
 ## Project setup
 ```
 npm install
@@ -22,10 +29,3 @@ npm run lint
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-###Brief
-Use your favourite JavaScript framework and libraries. We use React, but you're welcome to use another if you like
-The flight information should be updated regularly to ensure the flight information shown to the user is up to date
-Please .gitignore the node_modules directory!
-The solution should be simple, but think about how it could fit in to a bigger project (reusable components, etc)
-Please feel free to contact gary_harrower@edinburghairport.com with any questions you have!
