@@ -21,12 +21,12 @@ export default {
       }
     },
     components: {
-      "flights-table": FlightsTable,
+        "flights-table": FlightsTable,
     },
     // fetch's data at 1min intervals
-      created () {
-          this.fetchData();
-          setInterval(() => {
+    created () {
+        this.fetchData();
+        setInterval(() => {
             this.fetchData();
           }, 60000)
         },
