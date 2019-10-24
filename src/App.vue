@@ -16,7 +16,6 @@ export default {
   data(){
     return {
       flights: [],
-      timer: '',
       selectedFlight: null,
 
       }
@@ -24,16 +23,20 @@ export default {
     components: {
       "flights-table": FlightsTable,
     },
-    created () {
-        this.fetchData();
-        this.timer = setInterval(this.fetchData(), 5000)
-      },
+    // fetch's data at 1min intervals
+      created () {
+          this.fetchData();
+          setInterval(() => {
+            this.fetchData();
+          }, 60000)
+        },
     methods: {
     fetchData(){
      fetch('https://kabrudle.edinburghairport.com/api/flights/all')
     .then(res => res.json())
     .then(flights => this.flights = flights);
       },
+
     },
   }
 
