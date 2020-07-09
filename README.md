@@ -7,6 +7,7 @@ The flight information should be updated regularly to ensure the flight informat
 Please .gitignore the node_modules directory!
 The solution should be simple, but think about how it could fit in to a bigger project (reusable components, etc)
 
+
 ## Project setup
 ```
 npm install
@@ -29,3 +30,6 @@ npm run lint
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+See Flight_Info_Screen_Grid_React I recreated the same project in React to compare both frameworks
+
